@@ -1,5 +1,5 @@
 import feedparser
-from clean_html import clean_html
+from server.service.clean_html import clean_html
 import random
 
 
@@ -60,6 +60,3 @@ def run_line(type:int):
             data[f"date{i}"] = entry.published        # дата
 
     return data
-
-data = run_line(6)
-print(data)

@@ -8,7 +8,6 @@ def weather():
     try:
         r = requests.get("https://yandex.ru/pogoda/chelyabinsk", 
                         headers=headers, timeout=20)
-        print("Статус:", r.status_code)
         
         soup = BeautifulSoup(r.text, 'html.parser')
         
